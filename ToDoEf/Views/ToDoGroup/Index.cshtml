@@ -1,4 +1,6 @@
-﻿
+﻿@using ToDoEf.Controllers
+@using Microsoft.AspNetCore.Mvc.Rendering
+@using Microsoft.AspNetCore.Mvc.ViewFeatures
 @{
     Layout = null;
 }
@@ -24,7 +26,7 @@
                     <td>@Html.DisplayFor(modelItem=>item.Name)</td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Details" asp-controller="ToDoItems" asp-route-id="@item.Id">Details</a> |
                     <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                 </td>
                 </tr>

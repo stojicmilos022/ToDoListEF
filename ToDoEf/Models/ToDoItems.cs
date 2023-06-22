@@ -10,6 +10,8 @@ namespace ToDoEf.Models
         [Required]
         public string Name { get; set; }
 
+        public bool Completed { get; set; }
+
         public ToDoGroup Group { get; set; }
         public int  GroupId {get;set;}
 
